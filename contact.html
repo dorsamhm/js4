@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/stylesheet/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/stylesheet/bootstrap.min.css.map">
+    <link rel="stylesheet" href="assets/stylesheet/contactCss.css">
+    <link rel="stylesheet" href="font/bootstrap-icons.css">
+</head>
+<body>
+    <section class="contact">
+        <h2>contacts.</h2>
+        <nav class="menu">
+            <span class="toggle"><i class="bi bi-x-diamond"></i></span>
+            <figure>
+                <img src="assets/img/logo_menu_decor.svg" alt="logo">
+            </figure>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+                <li><a href="#">contacts</a></li>
+            </ul>
+        </nav>
+        <div class="socials">
+            <a target="_blank" href="https://instagram.com/dorsamhmdi.web?igshid=OGQ5ZDc2ODk2ZA=="><i class="bi bi-instagram"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/dorsa-mohammadi-692854284"><i class="bi bi-linkedin"></i></a>
+            <a target="_blank" href="https://github.com/dorsamhm"><i class="bi bi-github"></i></a>
+        </div>
+    </section>
+</body>
+<script>
+let sec = document.getElementsByClassName('contact')[0]
+let menu = document.querySelector('.menu')
+let toggle = document.querySelector('.toggle')
+// console.log(toggle);
+let iconToggle = document.querySelector('.toggle i')
+let i = 1;
+toggle.addEventListener('click', function(){
+    if(i%2){
+        menu.style.clipPath = 'circle(150% at 50% 0%)'
+        iconToggle.classList.remove('bi-x-diamond')
+        iconToggle.classList.add('bi-x-diamond-fill')
+    }
+    else{
+        menu.style.clipPath = 'circle(70px at 50% 0%)'
+        iconToggle.classList.add('bi-x-diamond')
+        iconToggle.classList.remove('bi-x-diamond-fill')
+    }
+    i++
+})
+</script>
+</html>

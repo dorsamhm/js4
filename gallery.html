@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/stylesheet/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/stylesheet/bootstrap.min.css.map">
+    <link rel="stylesheet" href="assets/stylesheet/galleryCss.css">
+</head>
+<body>
+    <main>
+        <section class="gallery">
+            <!-- 6 -->
+            <div class="ceil"></div>
+            <div class="floor"></div>
+            <div>
+                <figure>
+                    <img src="assets/img/gallery/vasyl_khodakivskyi_ballet.jpg" alt="ballet">
+                    <figcaption><span>ballet</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/gallery/vasyl_khodakivskyi_behind_the_scenes.jpg" alt="behind the scenes">
+                    <figcaption><span>behind the scenes</span></figcaption>
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <img src="assets/img/gallery/vasyl_khodakivskyi_crossing.jpg" alt="crossing">
+                    <figcaption><span>crossing</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/gallery/vasyl_khodakivskyi_moon_sonata.jpg" alt="moon sonata">
+                    <figcaption><span>moon sonata</span></figcaption>
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <img src="assets/img/gallery/vasyl_khodakivskyi_newlyweds.jpg" alt="newleyweds">
+                    <figcaption><span>newlyweds</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/gallery/vasyl_khodakivskyi_post_scriptum.jpg" alt="post scriptum">
+                    <figcaption><span>post scriptum</span></figcaption>
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <img src="assets/img/gallery/vasyl_khodakivskyi_spirit_of_freedom.jpg" alt="spirit of freedom">
+                    <figcaption><span>spirit of freedom</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/gallery/vasyl_khodakivskyi_sight.jpg" alt="sight">
+                    <figcaption><span>sight</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/gallery/vasyl_khodakivskyi_the_way.jpg" alt="the way">
+                    <figcaption><span>the way</span></figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    let _main = document.getElementsByTagName('main')[0]
+    // console.log(_main);
+    let gallery = document.getElementsByClassName('gallery')[0]
+    let tGallery = gallery.computedStyleMap().get('top').value
+    let lGallery = gallery.computedStyleMap().get('left').value
+    let _100vw = _main.clientWidth/2.5
+    let _100vh = _main.clientHeight/2
+    // console.log(_100vw);
+    window.addEventListener('keydown', function(e){
+        if(e.keyCode == 37 || e.keyCode == 39)
+        {
+            window.addEventListener('scroll', slideX)
+            window.removeEventListener('scroll', slideY)
+        }
+        else if(e.keyCode == 38 || e.keyCode == 40){
+            window.addEventListener('scroll', slideY)
+            window.removeEventListener('scroll', slideX)
+        }
+    })
+
+    function slideY(){
+        let temp = window.scrollY
+        // console.log(temp);
+        gallery.style.transform = 'translateX(-50%) rotateX('+(temp/10)+'deg)'
+        gallery.style.top = _100vh/7 + 'px'
+    }
+    function slideX(){
+        let tempX = window.scrollX
+        gallery.style.transform = 'translateX(-50%) rotateY('+(tempX/5)+'deg)'
+        gallery.style.left =  lGallery + ((tempX/2.5)/_100vw)*100 + '%'
+        gallery.style.top = _100vh/7 + 'px'
+    }
+</script>
+</html>

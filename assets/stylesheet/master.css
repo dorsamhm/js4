@@ -1,0 +1,339 @@
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: main;
+  src: url(../../font/LucyRosePERSONAL-Regular.otf);
+}
+.main {
+  height: 1300vh;
+  cursor: none;
+  position: relative;
+}
+.main .bright, .main .dark {
+  height: 1300vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../img/screen_grey_bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.main .bright .menu, .main .dark .menu {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-clip-path: circle(70px at 50% 0%);
+          clip-path: circle(70px at 50% 0%);
+  transition: 1s;
+  z-index: 1000;
+}
+.main .bright .menu figure, .main .dark .menu figure {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .bright .menu figure > img, .main .dark .menu figure > img {
+  width: 80%;
+  height: 80%;
+}
+.main .bright .menu .toggle, .main .dark .menu .toggle {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 100;
+}
+.main .bright .menu .toggle i, .main .dark .menu .toggle i {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.main .bright .menu ul, .main .dark .menu ul {
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.main .bright .menu ul > li, .main .dark .menu ul > li {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .bright .menu ul > li > a, .main .dark .menu ul > li > a {
+  width: auto;
+  font-size: 5vw;
+  font-family: main;
+  color: rgb(40, 40, 40);
+  text-align: center;
+}
+.main .bright .artIntro, .main .dark .artIntro {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  height: 70vh;
+}
+.main .bright .artIntro > img, .main .dark .artIntro > img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main .bright .artIntro figcaption, .main .dark .artIntro figcaption {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: auto;
+}
+.main .bright .artIntro figcaption > *, .main .dark .artIntro figcaption > * {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.main .bright .artIntro figcaption h2, .main .dark .artIntro figcaption h2 {
+  font-family: main;
+  font-size: 6vw;
+  text-transform: uppercase;
+}
+.main .bright .artIntro figcaption h4, .main .dark .artIntro figcaption h4 {
+  font-size: 3vw;
+  font-weight: 100;
+}
+.main .bright .name, .main .dark .name {
+  height: 300vh;
+  background-image: url(../img/screen_grey_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+  width: 100%;
+  position: absolute;
+  top: 150vh;
+  left: 0;
+}
+.main .bright .name > p, .main .dark .name > p {
+  width: 200%;
+  font-size: 10vw;
+  font-family: main;
+  z-index: 100;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  text-wrap: nowrap;
+}
+.main .bright .name > p:nth-of-type(1), .main .dark .name > p:nth-of-type(1) {
+  top: 30vh;
+  right: -220%;
+  opacity: 1;
+  transition: 0s;
+}
+.main .bright .name > p:nth-of-type(2), .main .dark .name > p:nth-of-type(2) {
+  top: 20vh;
+  right: 50%;
+  position: fixed;
+  transition: 0s;
+  opacity: 0;
+  transform: translateX(50%);
+}
+.main .bright .name .vasilPic, .main .dark .name .vasilPic {
+  height: 120vh;
+  width: 60vw;
+  position: absolute;
+  top: 100vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main .bright .name .vasilPic > img, .main .dark .name .vasilPic > img {
+  width: 100%;
+  height: 100%;
+}
+.main .bright .gallery3d, .main .dark .gallery3d {
+  height: 80vh;
+  width: 100%;
+  background-image: url(../img/page_main_screen_3_device.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  top: 950vh;
+  left: 0;
+  overflow: hidden;
+}
+.main .bright .gallery3d p, .main .dark .gallery3d p {
+  font-size: 11vw;
+  font-family: main;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  text-wrap: nowrap;
+  top: -175vh;
+  right: 50%;
+  transform: translateX(50%);
+}
+.main .bright .arrowBox, .main .dark .arrowBox {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  top: 650vh;
+  left: 0;
+  padding: 0;
+  transition: 1s;
+  opacity: 0;
+}
+.main .bright .arrowBox > *, .main .dark .arrowBox > * {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .bright .arrowBox p, .main .dark .arrowBox p {
+  width: 100%;
+  color: rgb(98, 97, 97);
+  justify-content: center;
+  font-size: 4vw;
+  text-align: center;
+  font-weight: 100;
+}
+.main .bright .arrowBox .arrow, .main .dark .arrowBox .arrow {
+  justify-content: center;
+  align-content: center;
+  height: 20vh;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0 42%;
+}
+.main .bright .arrowBox .arrow > figure, .main .dark .arrowBox .arrow > figure {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+.main .bright .arrowBox .arrow > figure:nth-of-type(1), .main .dark .arrowBox .arrow > figure:nth-of-type(1) {
+  margin: 0 30%;
+}
+.main .bright .arrowBox .arrow > figure > img, .main .dark .arrowBox .arrow > figure > img {
+  width: 100%;
+  height: 100%;
+}
+.main .bright .explore, .main .dark .explore {
+  height: 200vh;
+  width: 100%;
+  background-image: url(../img/page_main_screen_3_device.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  top: 350vh;
+  left: 0;
+}
+.main .bright .explore a, .main .dark .explore a {
+  display: flex;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 20px white;
+  color: grey;
+  text-transform: capitalize;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  position: absolute;
+  cursor: none;
+  top: 40vh;
+  left: 45vw;
+  transition: 0.4s;
+  transform: translate(-50%, -50%);
+}
+.main .dark {
+  z-index: 2000;
+  transition: 0s;
+  -webkit-clip-path: circle(130px at 50px 50px);
+  clip-path: circle(130px at 200px 200px);
+  background-image: url(../img/screen_black_bg.jpg);
+}
+.main .dark .menu {
+  background-color: black;
+}
+.main .dark .menu .toggle i {
+  color: white;
+}
+.main .dark .menu ul > li > a {
+  color: white;
+}
+.main .dark .menu figure > img {
+  filter: brightness(40%);
+}
+.main .dark .artIntro > img {
+  filter: hue-rotate(180deg);
+}
+.main .dark .artIntro figcaption > * {
+  color: black;
+}
+.main .dark .name {
+  background-image: url(../img/screen_black_bg.jpg);
+}
+.main .dark .name > p {
+  color: white;
+}
+.main .dark .name .vasilPic > img {
+  filter: hue-rotate(180deg);
+}
+.main .dark .gallery3d {
+  background-image: url(../img/page_main_screen_4_device.jpg);
+}
+.main .dark .gallery3d p {
+  color: black;
+}
+.main .dark .arrowBox p {
+  color: white;
+}
+.main .dark .arrowBox .arrow > figure > img {
+  filter: hue-rotate(180deg);
+}
+.main .dark .explore {
+  background-image: url(../img/page_main_screen_4_device.jpg);
+}
+.main .dark .explore a {
+  background-color: black;
+  box-shadow: 0 0 20px black;
+  color: white;
+}/*# sourceMappingURL=master.css.map */
